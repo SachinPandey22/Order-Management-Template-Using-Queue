@@ -18,19 +18,8 @@ Files:
 
 main.cpp (the sample below)
 
-Order.h (and possibly Order.cpp if not header-only)
-
-OrderQueue.h (templated; implementation should be in the header or a .tpp included by it)
-
-Build
-# If OrderQueue is header-only (typical for templates):
-g++ -std=cpp17 -O2 -Wall -Wextra main.cpp -o order_queue
-
-# If you also have .cpp files:
-g++ -std=cpp17 -O2 -Wall -Wextra main.cpp Order.cpp OrderQueue.cpp -o order_queue
-
-
-⚠️ Note on templates: For OrderQueue<T>, keep the implementation in the header (or include a .tpp) so the compiler can instantiate templates.
+Order.h
+Order.cpp
 
 Run
 ./order_queue
@@ -60,9 +49,3 @@ Preparing: Alex - Spicy Chicken Sandwich
 3
 Serving: Alex - Spicy Chicken Sandwich
 [Queue] (empty)
-
-Notes
-
-Update the app name, class names, or prompts if your assignment rubric needs specific wording.
-
-Tested with OrderQueue<string> but works with any Order<T> where T is printable.
